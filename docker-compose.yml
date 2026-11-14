@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  admin:
+    image: ohmind_admin
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: ohmind_admin
+
+    ports:
+      - "3000:3000"
+
+    env_file:
+      - .env
+
+    restart: unless-stopped
+
+    networks:
+      - ohmind_network
+
+networks:
+  ohmind_network:
+    driver: bridge
