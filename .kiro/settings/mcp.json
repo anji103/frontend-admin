@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    // "figma": {
+    //   "url": "https://mcp.figma.com/mcp",
+    //   "oauth": {
+    //     "clientId": "293J17YFyIrbYCPVVfpIGu",
+    //     "clientSecret": "wZgTSatNGO5VD5cxpHqWzzAB2oG4Qn47O98sVo7y",
+    //     "redirectUri": "http://localhost:7778/oauth/callback",
+    //     "oauthScopes": ["files:read"]
+    //   },
+    //   "disabled": false,
+    //   "autoApprove": ["get_figma_data", "download_figma_images"]
+    // }
+    "figma": {
+      "command": "npx",
+      "args": ["@figma/mcp-server"],
+      "env": {
+  "FIGMA_TOKEN": "${FIGMA_ACCESS_TOKEN}"
+}
+    }
+  },
+  "powers": {
+    "mcpServers": {
+      "power-figma-figma": {
+        "type": "http",
+        "url": "https://mcp.figma.com/mcp"
+      }
+    }
+  }
+}
+
