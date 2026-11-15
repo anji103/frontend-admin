@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   admin:
-    image: localhost:4566/000000000000/us-east-1/nextjs-app:build-1
+    image: ohmind_admin
     build:
       context: .
       dockerfile: Dockerfile
